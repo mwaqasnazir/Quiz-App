@@ -138,11 +138,11 @@ class QuizActivity : AppCompatActivity(), View.OnClickListener {
 
             if (selectedAnswer.isEmpty()){
                 Toast.makeText(this, "Please Select Your Answer", Toast.LENGTH_SHORT).show()
+                return
             }
 
             if (selectedAnswer == questionModelList[currentQuestionIndex].answer) {
                 score++
-                Log.i(TAG, "onClick: Score is incremented $score")
             }
 
             currentQuestionIndex++
